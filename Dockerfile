@@ -8,4 +8,4 @@ WORKDIR /tex
 COPY ./tex ./
 
 # When container runs, compile main .tex with pdflatex
-CMD pdflatex SimpleCV.tex
+CMD pdflatex SimpleCV.tex && biber SimpleCV && pdflatex SimpleCV.tex
